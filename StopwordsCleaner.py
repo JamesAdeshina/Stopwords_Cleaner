@@ -1,14 +1,16 @@
 import nltk
-
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
+
+# Ensure NLTK data is downloaded
 nltk.download('stopwords')
+nltk.download('punkt')
 
 #assigning the text sarah.txt to the sarahText global variable
-sarahText = 'Sarah.txt'
+sarahText = 'data/Sarah.txt'
 
-#Reading the sarah.txt through the variable "sarahText", this could also be done directly as well as "Sarah.txt". We then stored the txt in the line variable.
+#Reads a text file and returns its content as a string.
 with open(sarahText) as f:
     lines = f.readlines()
 
@@ -18,10 +20,11 @@ eng_stopwords = stopwords.words('english')
 #Then we proceed to tokenize the text sample in the lines variable
 text_tokens = word_tokenize(lines[0])
 
+
 #Removing the stopwords from the sarah.txt text sample
 without_sw = [
     word for word in text_tokens
-        if not word in
+        if not word.lower() in
                 eng_stopwords
 ]
 
