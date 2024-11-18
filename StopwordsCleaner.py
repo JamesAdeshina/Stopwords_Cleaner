@@ -20,6 +20,7 @@ eng_stopwords = stopwords.words('english')
 #Then we proceed to tokenize the text sample in the lines variable
 text_tokens = word_tokenize(lines[0])
 
+#I am tutoring Emma
 
 #Removing the stopwords from the sarah.txt text sample
 without_sw = [
